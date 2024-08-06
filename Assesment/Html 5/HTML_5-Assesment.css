@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald";
+}
+.Assesment{
+    background: lightblue;
+    width: 1400px;
+    margin: 0 auto;
+}
+/* .container{
+    width: 1400px;
+    margin: 0 auto;
+    background: lightblue;
+} */
+.Assesment .header-contain h1{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 100px;
+    padding: 20px 0;
+    border-bottom: 1px solid;
+}
+.Assesment .header-contain p{
+    padding: 10px;
+}
+.Assesment .sec-1 .sec-1-contain{
+    margin: 0 auto;
+    width: 1200px;
+}
+.Assesment .sec-1 .sec-1-contain .row{
+    display: flex;
+    background-color: white;
+}
+.Assesment .sec-1 .sec-1-contain .row .col{
+    width: 33.33%;
+    padding: 30px;
+    font-size: 20px;
+}
+.Assesment .sec-1 .sec-1-contain .row .col p{
+    width: 68%;
+}
+.Assesment .sec-1 .sec-1-contain .row .col .sec-1-icon{
+    margin: 10px 0;
+}
+.Assesment .sec-1 .sec-1-contain .row .col .sec-1-icon .phone, .email{
+    padding: 5px 0;
+    font-size: 20px;
+}
+.Assesment .sec-1 .sec-1-contain .row .col .sec-1-icon .phone a{
+    color: red;
+    text-decoration: none;
+}
+.Assesment .sec-1 .sec-1-contain .row .col .sec-1-icon .email a{
+    color: rgb(9, 151, 233);
+    text-decoration: none;
+}
+.Assesment .sec-1 .sec-1-contain .row .col .sec-1-location .location{
+    padding: 20px 80px;
+    font-size: 35px;
+}
+.Assesment .sec-1 .sec-1-contain .row .col .sec-1-location .location a{
+    color: red;
+}
+.Assesment .sec-2, .sec-4{
+    padding: 20px;
+}
+.Assesment .sec-3 .sec-3-contain{
+    margin: 0 auto;
+    width: 1200px;
+}
+.Assesment .sec-3 .sec-3-contain .row{
+    display: flex;
+    background-color: white;
+}
+.Assesment .sec-3 .sec-3-contain .row .col-40{
+    width: 45%;
+    padding: 25px;
+}
+.Assesment .sec-3 .sec-3-contain .row .col-60{
+    width: 55%;
+    padding: 25px;
+}
+.Assesment .sec-3 .sec-3-contain .row .col-40 input{
+    width: 238px;
+    /* padding: 20px; */
+    margin: 10px 10px;
+    padding: 20px 10px;
+    font-size: 25px;
+}
+.Assesment .sec-3 .sec-3-contain .row .col-40 .Mess{
+    padding: 60px 10px;
+    width: 500px;
+    font-size: 25px;
+    /* text-align: left; */
+}
+.Assesment .sec-3 .sec-3-contain .row .col-40 button{
+    padding: 20px 50px;
+    font-size: 25px;
+    margin: 10px 10px;
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,35 @@
+<!-- What is the drawback of declaring methods directly in JavaScript objects?  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person = {
+        name: "John",
+        age: 30,
+        sayHello: function() {
+            console.log("Hello, my name is " + this.name);
+        }
+        };
+
+        person.sayHello(); // Outputs: "Hello, my name is John"
+        function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        }
+
+        Person.prototype.sayHello = function() {
+        console.log("Hello, my name is " + this.name);
+        };
+
+        var john = new Person("John", 30);
+        john.sayHello(); // Outputs: "Hello, my name is John"
+
+    </script>
+</body>
+</html>

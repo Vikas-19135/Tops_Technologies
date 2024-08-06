@@ -1,0 +1,37 @@
+<!-- WAP to convert years into days and days into years?
+
+->  To convert years into days and vice versa, you need to know the number of days in a year and then perform the
+    appropriate mathematical operations.
+    Assuming a year consists of 365 days (ignoring leap years for simplicity), here's how you can write JavaScript functions
+    to perform the conversions: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to convert years to days
+        function yearsToDays(years) {
+        return years * 365;
+        }
+
+        // Function to convert days to years
+        function daysToYears(days) {
+        return days / 365;
+        }
+
+        // Example usage
+        let years = 2;
+        let days = 730;
+
+        console.log(years + " years is equal to " + yearsToDays(years) + " days.");
+        console.log(days + " days is equal to " + daysToYears(days) + " years.");
+
+    </script>
+</body>
+</html>

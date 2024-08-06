@@ -1,0 +1,33 @@
+<!-- Write to find the largest of three numbers in JS? -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findLargestNumber(a, b, c) {
+    let largest = a; // Assume 'a' is the largest initially
+
+    if (b > largest) {
+        largest = b; // Update 'largest' if 'b' is greater than current 'largest'
+    }
+
+    if (c > largest) {
+        largest = c; // Update 'largest' if 'c' is greater than current 'largest'
+    }
+
+    return largest;
+}
+
+// Example usage:
+console.log(findLargestNumber(10, 5, 8));   // Output: 10
+console.log(findLargestNumber(4, 12, 6));   // Output: 12
+console.log(findLargestNumber(7, 9, 15));   // Output: 15
+    </script>
+</body>
+</html>

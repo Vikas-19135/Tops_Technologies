@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Subject Percentage Calculator</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    }
+
+    .subject-input {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    #result {
+        margin-top: 20px;
+    }
+
+</style>
+<body>
+     <div class="container">
+         <h2>Marksheet for Information Technology</h2>
+         <div>
+             <label for="subject1">C Language</label>
+             <input type="number" id="subject1" class="subject-input" max="100" min="0">
+         </div>
+         <div>
+             <label for="subject2">C++ Language</label>
+             <input type="number" id="subject2" class="subject-input" max="100" min="0">
+         </div>
+         <div>
+             <label for="subject3">Database</label>
+             <input type="number" id="subject3" class="subject-input" max="100" min="0">
+         </div>
+         <div>
+             <label for="subject4">HTML</label>
+             <input type="number" id="subject4" class="subject-input" max="100" min="0">
+         </div>
+         <div>
+             <label for="subject5">CSS</label>
+             <input type="number" id="subject5" class="subject-input" max="100" min="0">
+         </div>
+         <div>
+             <label for="subject6">PHP</label>
+             <input type="number" id="subject6" class="subject-input">
+         </div>
+         <div>
+             <label for="subject7">Core Java</label>
+             <input type="number" id="subject7" class="subject-input">
+         </div>
+         <button onclick="add()">Result</button>
+         <button id="calculate-btn">Calculate Average</button>
+         <h2 id="result"></h2>
+         <div id="result"></div>
+    </div>
+ 
+    <script>
+            function add()
+                    {
+                        if((parseFloat(subject1.value) > 0 && parseFloat(subject1.value) <= 100) && (parseFloat(subject2.value) > 0 && parseFloat(subject2.value) <= 100) 
+                        && (parseFloat(subject3.value) > 0 && parseFloat(subject3.value) <=100 ) && (parseFloat(subject4.value) > 0 && parseFloat(subject4.value) <= 100) && 
+                        (parseFloat(subject5.value)  > 0 && parseFloat(subject5.value) <= 100) && (parseFloat(subject6.value) > 0 && parseFloat(subject6.value) <= 100) && 
+                        (parseFloat(subject7.value) > 0 && parseFloat(subject7.value) <= 100)){
+                            var res = parseFloat(subject1.value)+parseFloat(subject2.value)+
+                            parseFloat(subject3.value)+parseFloat(subject4.value)+
+                            parseFloat(subject5.value)+parseFloat(subject6.value)+
+                            parseFloat(subject7.value)
+                            if (res > 0) {
+                                document.getElementById("result").innerHTML = res
+                            }
+                        }else{
+                            document.getElementById("result").innerHTML = 'Please enter valid number'
+
+                        }
+                    }
+            document.addEventListener('DOMContentLoaded', function() {
+                const calculateBtn = document.getElementById('calculate-btn');
+                const resultDiv = document.getElementById('result');
+                
+            calculateBtn.addEventListener('click', function() {
+
+                if((parseFloat(subject1.value) > 0 && parseFloat(subject1.value) <= 100) && (parseFloat(subject2.value) > 0 && parseFloat(subject2.value) <= 100) 
+                        && (parseFloat(subject3.value) > 0 && parseFloat(subject3.value) <=100 ) && (parseFloat(subject4.value) > 0 && parseFloat(subject4.value) <= 100) && 
+                        (parseFloat(subject5.value)  > 0 && parseFloat(subject5.value) <= 100) && (parseFloat(subject6.value) > 0 && parseFloat(subject6.value) <= 100) && 
+                        (parseFloat(subject7.value) > 0 && parseFloat(subject7.value) <= 100)){
+
+                            const subjects = document.getElementsByClassName('subject-input');
+                            let total = 0;
+                            let count = 0;
+                            console.log(total);
+                            
+                            for (let i = 0; i < subjects.length; i++) {
+                                const subjectPercentage = parseFloat(subjects[i].value);
+                                if (!isNaN(subjectPercentage)) {
+                                    total += subjectPercentage;
+                                    count++;
+                                }
+                            }
+            
+                            if (count === 0) {
+                                resultDiv.textContent = 'Please enter percentages for at least one subject.';
+                            } else {
+                                const average = total / count;
+                                resultDiv.textContent = `Average percentage: ${average.toFixed(2)}%`;
+                            }
+                            
+                        }else{
+                            resultDiv.textContent = `Please enter valid number`;
+                        }
+            });
+        });
+    </script>
+ </body>
+ </html>
+ 

@@ -1,0 +1,69 @@
+Find the length of a string without using libraryFunction?
+
+What is JavaScript?
+• What is the use of isNaN function?
+• What is negative Infinity?
+• Which company developed JavaScript?
+• What are undeclared and undefined variables?
+• Write the code for adding new elements dynamically?
+• What is the difference between ViewState and SessionState?
+• What is === operator?
+• How can the style/class of an element be changed?
+• How to read and write a file using JavaScript?
+• What are all the looping structures in JavaScript?
+• How can you convert the string of any base to an integer in JavaScript?
+• What is the function of the delete operator?
+• What are all the types of Pop up boxes available in JavaScript?
+• What is the use of Void (0)?
+• How can a page be forced to load another page in JavaScript?
+• What are the disadvantages of using innerHTML in JavaScript?
+
+-> 1. **JavaScript**:
+- JavaScript is a high-level, interpreted programming language primarily used for creating interactive and dynamic web content. It is commonly used for adding behavior to web pages, manipulating the Document Object Model (DOM), handling events, and communicating with servers to create web applications.
+
+-> 2. **isNaN Function**:
+- The `isNaN()` function is used to determine whether a value is NaN (Not-a-Number) or not. It returns `true` if the value is NaN, otherwise `false`. It is often used to validate input when dealing with numeric operations.
+
+-> 3. **Negative Infinity**:
+- Negative Infinity is a special value in JavaScript representing the mathematical concept of negative infinity. It is the result of operations like dividing a negative number by zero or evaluating negative numbers larger than the range of representable numbers. It can be accessed using `Number.NEGATIVE_INFINITY`.
+
+-> 4. **JavaScript Developer**:
+- JavaScript was developed by Netscape Communications Corporation, with Brendan Eich being the original developer.
+
+-> 5. **Undeclared and Undefined Variables**:
+- Undeclared variables are those that have been used in code without being declared using the `var`, `let`, or `const` keywords. Attempting to use an undeclared variable will result in a ReferenceError.
+- Undefined variables are those that have been declared but not assigned a value. Accessing such variables will result in the value `undefined`.
+
+-> 6. **Adding New Elements Dynamically**:
+```javascript
+// Create a new element
+const newElement = document.createElement('div');
+
+// Add content to the new element
+newElement.textContent = 'New Element';
+
+// Append the new element to an existing element in the DOM
+document.getElementById('parentElement').appendChild(newElement);
+```
+
+-> 7. **ViewState vs SessionState**:
+- ViewState is specific to ASP.NET and is used to store the state of a page and its controls between postbacks.
+- SessionState, also used in ASP.NET, is used to store session-specific data that is accessible across multiple pages during a user's session.
+
+-> 8. **=== Operator**:
+- The `===` operator, also known as the strict equality operator, compares two values for equality without performing type conversion. It returns `true` if both the value and the type of the operands are the same, otherwise `false`.
+
+-> 9. **Changing Style/Class of an Element**:
+- To change the style of an element:
+  ```javascript
+  document.getElementById('elementId').style.property = 'value';
+  ```
+- To change the class of an element:
+  ```javascript
+  document.getElementById('elementId').className = 'newClassName';
+  ```
+
+-> 10. **Reading and Writing a File using JavaScript**:
+ - JavaScript executed in a web browser cannot directly read or write files on the user's computer due to security restrictions. However, in a Node.js environment, file reading and writing operations can be performed using built-in file system modules like `fs`.
+
+These are the answers to the questions you've provided. Let me know if you need more information on any of these topics!

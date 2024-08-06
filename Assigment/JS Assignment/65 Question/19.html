@@ -1,0 +1,24 @@
+<!-- What is the use of is Nan function?
+
+->  If the argument passed to isNaN() is a non-numeric value, it returns true.
+->  If the argument passed to isNaN() is a numeric value, it first converts it to a Number type. If the converted value is
+    NaN, it returns true, otherwise, it returns false. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        isNaN("Hello"); // true, because "Hello" is not a number
+        isNaN(123);     // false, because 123 is a number
+        isNaN(NaN);     // true, because NaN is NaN
+        isNaN("123");   // false, because "123" can be converted to the number 123
+    </script>
+</body>
+</html>

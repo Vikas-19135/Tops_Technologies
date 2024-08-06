@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h3> Q.2) How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery ,
+        JQuery Animation?</h3>
+
+    <p>
+        To apply CSS using jQuery, you can use the .css() method. Here's how you can use it:
+    </p>
+    
+    <script>
+        // Applying CSS using jQuery
+        $(document).ready(function(){
+        // Applying CSS to an element with ID "myElement"
+        $('#myElement').css({
+        'color': 'red',
+        'font-size': '20px',
+        'background-color': 'yellow'
+         });
+     });
+    </script>
+
+    <p>
+        To add or remove classes in jQuery, you can use the .addClass() and .removeClass() methods respectively:
+    </p>
+
+    <script>
+    // Adding and removing classes using jQuery
+    $(document).ready(function(){
+    // Adding a class to an element with ID "myElement"
+    $('#myElement').addClass('newClass');
+
+    // Removing a class from an element with ID "myElement"
+    $('#myElement').removeClass('oldClass');
+    });
+    </script>
+
+    <p>
+        For jQuery animation, you can use methods like .animate(), .slideDown(), .slideUp(), .slideToggle(), .fadeIn(), .fadeOut(), etc. Here's an example of using .animate():
+    </p>
+
+    <script>
+    // jQuery animation example
+    $(document).ready(function(){
+    // Animate the width of an element with ID "myElement"
+    $('#myElement').animate({
+    width: '200px'
+    }, 1000); // duration in milliseconds
+    });
+    </script>
+</body>
+</html>

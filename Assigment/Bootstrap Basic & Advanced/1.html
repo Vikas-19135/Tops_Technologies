@@ -1,0 +1,73 @@
+• What are the advantages of Bootstrap?<br>
+• What is a Bootstrap Container, and how does it work?<br>
+• What do you know about the Bootstrap Grid System?<br>
+• What are the default Bootstrap text settings?<br>
+• What do you know about the Bootstrap Grid System?<br>
+• What is the difference between Bootstrap 4 and Bootstrap 5 <br>
+• What is a Button Group, and what is the class for a basic Button Group?<br>
+• How can you use Bootstrap to make thumbnails?<br>
+• In Bootstrap 4, what is flexbox?<br>
+• How can one create an alert in Bootstrap?<br> 
+• What is a bootstrap card and how would you create one?<br><br><br> 
+
+1. **Advantages of Bootstrap:**
+   - Responsive Design: Bootstrap provides a fluid grid layout that scales with the screen size, ensuring your website looks good on various devices.
+   - Consistency: It offers a set of pre-designed components and styles, ensuring consistency across different parts of your website.
+   - Customizable: While Bootstrap comes with default styles, it's highly customizable, allowing you to override styles or use custom CSS to tailor the design to your needs.
+   - Rapid Development: With ready-to-use components like buttons, forms, and navigation bars, Bootstrap speeds up the development process by reducing the need to write code from scratch.
+   - Browser Compatibility: Bootstrap ensures cross-browser compatibility, saving time and effort in testing and fixing issues. <br><br>
+
+2. **Bootstrap Container:**
+   - A Bootstrap Container is a fixed-width element that helps contain, align, and structure the content of a website. It wraps the site's content and keeps it within a certain width.
+   - Containers in Bootstrap come in two types: `.container` and `.container-fluid`. The former creates a responsive fixed-width container, while the latter creates a full-width container that spans the entire width of the viewport. <br> <br>
+
+3. **Default Bootstrap text settings:**
+   - Bootstrap provides default text settings for typography, including font size, line height, font family, and color.
+   - The default font size for body text is typically 16 pixels (`1rem`), with a line height of 1.5.
+   - Bootstrap also includes classes like `.lead` for larger, emphasized text and `.text-muted` for muted or subdued text. <br> <br>
+
+4. **Bootstrap Grid System:**
+   - The Bootstrap Grid System is a responsive, mobile-first grid system that allows you to create layouts with up to 12 columns.
+   - It uses a combination of container, rows, and columns to create flexible and responsive layouts.
+   - Columns can be rearranged and stacked vertically on smaller devices using responsive classes like `.col-sm-`, `.col-md-`, `.col-lg-`, etc. <br> <br>
+
+5. **Difference between Bootstrap 4 and Bootstrap 5:**
+   - Bootstrap 5 introduced several new features and improvements over Bootstrap 4, including dropping support for Internet Explorer, switching to vanilla JavaScript from jQuery for some components, introducing a new utility API, and updating several components and utilities. <br> <br>
+
+6. **Button Group and class for basic Button Group:**
+   - A Button Group in Bootstrap is a set of buttons grouped together for better organization and presentation.
+   - The class for a basic Button Group in Bootstrap is `.btn-group`. <br> <br>
+
+7. **Using Bootstrap to make thumbnails:**
+   - Bootstrap provides a `.thumbnail` class that can be applied to an image to create a thumbnail.
+   - You can wrap an image element with a `div` or `a` tag and apply the `.thumbnail` class to it to create a styled thumbnail. <br> <br>
+
+8. **Flexbox in Bootstrap 4:**
+   - Flexbox is a CSS layout mode that provides a more efficient way to layout, align, and distribute space among items in a container.
+   - Bootstrap 4 utilizes Flexbox for its grid system, making it easier to create flexible and responsive layouts. <br> <br>
+
+9. **Creating an alert in Bootstrap 4:**
+   - To create an alert in Bootstrap 4, you can use the `.alert` class along with contextual classes like `.alert-success`, `.alert-info`, `.alert-warning`, or `.alert-danger` to specify the style and color of the alert.
+   - You can also add a close button by including a `button` element with the class `.close` inside the `.alert` div. <br> <br> <br> <br>
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Bootstrap Card Example</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+    <div class="card m-auto" style="width: 18rem;">
+        <img src="/s6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+   </body>
+   </html>
+   

@@ -1,0 +1,23 @@
+<!-- Write find maximum number among 3 numbers using ternary operator in JS? -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findMaxNumber(a, b, c) {
+    return (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+}
+
+// Example usage:
+console.log(findMaxNumber(10, 5, 8));   // Output: 10
+console.log(findMaxNumber(4, 12, 6));   // Output: 12
+console.log(findMaxNumber(7, 9, 15));   // Output: 15
+    </script>
+</body>
+</html>

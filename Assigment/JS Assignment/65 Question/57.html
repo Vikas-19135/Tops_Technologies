@@ -1,0 +1,57 @@
+<!-- how many type of JS Event? How to use it ?  -->
+
+JavaScript events are actions or occurrences that happen in the browser or in a web page, triggered by user interactions, browser actions, or by other means such as timers. There are many types of events in JavaScript. Here are some common ones:
+
+1. **Mouse Events**:
+   - `click`: Occurs when the user clicks on an element.
+   - `mouseover`: Occurs when the mouse pointer moves over an element.
+   - `mouseout`: Occurs when the mouse pointer moves out of an element.
+   - `mousedown`: Occurs when the user presses a mouse button over an element.
+   - `mouseup`: Occurs when the user releases a mouse button over an element.
+
+2. **Keyboard Events**:
+   - `keydown`: Occurs when a key is pressed down.
+   - `keyup`: Occurs when a key is released.
+   - `keypress`: Occurs when a key is pressed.
+
+3. **Form Events**:
+   - `submit`: Occurs when a form is submitted.
+   - `change`: Occurs when the value of an input element changes.
+   - `focus`: Occurs when an element gets focus.
+   - `blur`: Occurs when an element loses focus.
+
+4. **Window Events**:
+   - `load`: Occurs when a page has finished loading.
+   - `resize`: Occurs when the browser window is resized.
+   - `scroll`: Occurs when the user scrolls in the window.
+
+5. **Document Events**:
+   - `DOMContentLoaded`: Occurs when the HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+   - `readystatechange`: Occurs when the readyState property of the document object changes.
+
+And many more...
+
+To use JavaScript events, you typically attach event listeners to HTML elements. Here's a basic example of how you can use an event listener to detect a click event:
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+    <script>
+// Get the button element
+const button = document.getElementById("myButton");
+
+// Attach a click event listener to the button
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});
+    </script>
+</body>
+</html>

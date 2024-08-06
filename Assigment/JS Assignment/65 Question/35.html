@@ -1,0 +1,34 @@
+<!-- Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function summationOfDigits(number) {
+        let sum = 0;
+
+        // Convert number to string to iterate through each digit
+        const numberString = String(number);
+
+        // Iterate through each digit
+        for (let i = 0; i < numberString.length; i++) {
+            // Convert each digit back to integer and add to sum
+            sum += parseInt(numberString[i]);
+        }
+
+        return sum;
+    }
+
+// Example usage:
+const number = 1523;
+const summation = summationOfDigits(number);
+console.log("Summation of digits in", number, "is:", summation);
+
+    </script>
+</body>
+</html>

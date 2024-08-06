@@ -1,0 +1,29 @@
+<!-- Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS? -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseNumber(number) {
+        // Convert number to string, split into array, reverse it, and join back to string
+        const reversedString = String(number).split('').reverse().join('');
+        
+        // Convert reversed string back to number
+        const reversedNumber = parseInt(reversedString);
+
+        return reversedNumber;
+    }
+
+// Example usage:
+const number = 64728;
+const reversed = reverseNumber(number);
+console.log("Original number:", number);
+console.log("Reversed number:", reversed);
+    </script>
+</body>
+</html>

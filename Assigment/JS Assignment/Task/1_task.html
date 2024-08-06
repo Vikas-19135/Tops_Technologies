@@ -1,0 +1,32 @@
+Create password field with show hide functionalities
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <input type="checkbox" id="showPassword"> Show Password
+
+
+<script>
+    const passwordInput = document.getElementById('password');
+    const showPasswordCheckbox = document.getElementById('showPassword');
+
+    showPasswordCheckbox.addEventListener('change', function() {
+        if (showPasswordCheckbox.checked) {
+            passwordInput.type = 'text'; // Change input type to text to show password
+        } else {
+            passwordInput.type = 'password'; // Change input type to password to hide password
+        }
+    });
+</script>
+</body>
+</html>

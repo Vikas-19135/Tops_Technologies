@@ -1,0 +1,32 @@
+<!-- Write a JavaScript Program to find the area of a triangle?  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateTriangleArea(base, height) {
+        // Check if base and height are positive numbers
+        if (base > 0 && height > 0) {
+            // Calculate the area of the triangle
+            let area = (base * height) / 2;
+            return area;
+        } else {
+            // If base or height is not positive, return error message
+            return "Base and height must be positive numbers.";
+        }
+        }
+
+        // Example usage:
+        let base = 5;
+        let height = 8;
+        let area = calculateTriangleArea(base, height);
+        console.log("The area of the triangle with base", base, "and height", height, "is", area);
+
+    </script>
+</body>
+</html>

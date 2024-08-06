@@ -1,0 +1,24 @@
+<!-- What is the result of the expression true && false || false && true? 
+
+-> In JavaScript, the && operator has higher precedence than the || operator. Therefore, expressions are evaluated from left to right, and the && operator is evaluated before the || operator.
+
+Let's break down the expression true && false || false && true:
+
+true && false evaluates to false because one of the operands (false) is false.
+false || false && true evaluates to false because the left operand (false) is false.
+Here's the JavaScript code: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(true && false || false && true); // Output: false
+    </script>
+</body>
+</html>

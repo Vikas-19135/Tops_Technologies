@@ -1,0 +1,25 @@
+<!-- What is the drawback of declaring methods directly in JavaScript objects?  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // One drawback of declaring methods directly in JavaScript objects is that it can lead to increased memory usage, especially if you have multiple instances of the object.
+
+        // When you declare a method directly within an object, each instance of that object will have its own copy of the method. This can be inefficient if the method is large or if you have many instances of the object, as it consumes more memory than if the method were declared on the prototype.
+
+        // Additionally, if you need to modify or update the method later, you would have to update it for each instance of the object, which can be cumbersome and error-prone.
+
+        // Using prototypes or classes to define methods can help mitigate these issues by allowing methods to be shared among all instances of the object, reducing memory usage and making it easier to update methods across all instances.
+    </script>
+</body>
+
+</html>

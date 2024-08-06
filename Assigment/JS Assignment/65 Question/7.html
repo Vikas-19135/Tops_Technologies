@@ -1,0 +1,33 @@
+<!-- Check if typeof '10' is exactly equal to 10. If not make it exactly equal?
+
+->  In JavaScript, the typeof operator returns a string indicating the type of the operand. Therefore, the expression
+    typeof '10' would evaluate to the string 'string'. To check if it's exactly equal to the number 10, we can convert the
+    string '10' to a number using the parseInt() function. Here's how you can do it: -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        if (typeof '10' !== typeof 10) {
+            console.log("The type of '10' is not exactly equal to 10.");
+            // Convert '10' to a number
+            let num = parseInt('10');
+            console.log(num); // Output: 10
+        }
+        else {
+            console.log("The type of '10' is exactly equal to 10.");
+        }
+        // This code checks if the type of '10' is not exactly equal to the type of 10. If they are not equal, 
+        // it converts the string '10' to a number using parseInt(). After this conversion, they will be exactly equal.
+        
+    </script>
+</body>
+
+</html>

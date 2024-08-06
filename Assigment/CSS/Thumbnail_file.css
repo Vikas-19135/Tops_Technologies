@@ -1,0 +1,52 @@
+.main1{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 100px;
+    padding-left: 100px;
+}
+.Main-card{
+    border: 10px double;
+    width: 20%;
+    border-radius: 20px;
+    background-color: #e0ffff;
+}
+.Main-card .card-img img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.Main-card .card-contain h1{
+    margin: 30px 70px;
+    text-align: center;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 25px;
+    text-shadow: 0px 0px 5px red;
+}
+.Main-card .card-contain p{
+    padding: 10px 25px;
+}
+.Main-card .register{
+    text-align: center;
+}
+.Main-card .offer{
+    margin: 30px 90px;
+    font-size: 20px;
+    padding: 10px 0;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 25px;
+    text-shadow: 0px 0px 5px red;
+}
+.Main-card .card-btn{
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 25px;
+}
+.Main-card .card-btn:hover{
+    border: 10px double red;
+    cursor: pointer;
+}

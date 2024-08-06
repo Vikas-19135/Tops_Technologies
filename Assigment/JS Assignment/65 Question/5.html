@@ -1,0 +1,33 @@
+<!-- What the deference between undefined and undeclare in JavaScript?
+
+-> In JavaScript, "undefined" and "undeclared" are two distinct concepts:
+
+    Undefined:
+
+    "Undefined" typically refers to a variable that has been declared but has not been assigned a value explicitly.
+    It can also be the value of an uninitialized variable or the return value of a function that doesn't explicitly return anything.
+    JavaScript automatically initializes variables to undefined when they are declared but not assigned a value.
+    It's a type in JavaScript, and it indicates the absence of a value or the uninitialized state of a variable.
+
+    Undeclared:
+
+    "Undeclared" refers to a variable that has been used without being formally declared using var, let, or const.
+    Using an undeclared variable typically results in a reference error.
+    This often happens when a variable is mistyped or used without proper declaration. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            console.log(y); // ReferenceError: y is not defined
+
+            let x;
+            console.log(x); // Output: undefined
+        </script>
+    </body>
+    </html>

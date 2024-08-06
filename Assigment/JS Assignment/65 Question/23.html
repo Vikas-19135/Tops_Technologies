@@ -1,0 +1,30 @@
+<!-- Find the Character Is Vowel or Not ? -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isVowel(character) {
+    // Convert the character to lowercase to handle both cases (uppercase and lowercase vowels)
+    character = character.toLowerCase();
+
+    // Check if the character is a vowel
+    if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Example usage:
+console.log(isVowel('a')); // Output: true
+console.log(isVowel('b')); // Output: false
+    </script>
+</body>
+</html>

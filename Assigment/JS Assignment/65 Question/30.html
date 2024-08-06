@@ -1,0 +1,59 @@
+<!-- What are the looping structures in JavaScript? Any one Example? -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for loop: Executes a block of code a specified number of times.
+
+        for (let i = 0; i < 5; i++) {
+            console.log("Iteration " + i);
+        }
+        
+        // while loop: Executes a block of code as long as a specified condition is true.
+        
+        let i = 0;
+        while (i < 5) {
+            console.log("Iteration " + i);
+            i++;
+        }
+        
+        // do...while loop: Similar to the while loop, but the block of code is executed at least once, even if the condition is false.
+        
+        // let i = 0;
+        do {
+        console.log("Iteration " + i);
+        i++;
+        } while (i < 5);
+        
+        // for...in loop: Iterates over the enumerable properties of an object.
+
+        const person = {
+        name: "John",
+        age: 30,
+        gender: "male"
+        };
+
+        for (let key in person) {
+        console.log(key + ": " + person[key]);
+        }
+
+        // for...of loop: Iterates over iterable objects such as arrays, strings, maps, sets, etc.
+
+        const colors = ["red", "green", "blue"];
+
+        for (let color of colors) {
+        console.log(color);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        height: 250px;
+        width: 500px;
+        border: 5px solid;
+        margin: 200px auto;
+    }
+    .heading{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .sum2{
+        text-align: left;
+        padding: 30px;
+    }
+    button{
+        width: 40px;
+        height: 40px;
+    }
+    #h1{
+        position: relative;
+        bottom: 125px;
+        left: 335px;
+        color: blue;
+    }
+    #h2{
+        position: relative;
+        bottom: 80px;
+        left: 230px;
+    }
+    .h2{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="main">
+        <h2 class="h2">Math Operation</h2>
+        <div class="heading">
+            <input type="text" placeholder="Enter 1st number" id="num1">
+            <input type="text" id="num2" placeholder="Enter 2nd number">
+        </div>
+        <div class="sum2">
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mul()">*</button>
+            <button onclick="divi()">/</button>
+        </div>
+        <h3 id="h2">Answer is :</h3>
+        <h2 id="h1"></h2>
+    </div>
+    <script>
+        var num1 = document.getElementById("num1")
+        console.log(num1)
+        var num2 = document.getElementById("num2")
+        console.log(num2)
+
+        function add()
+        {
+            let res = parseFloat(num1.value)+parseFloat(num2.value)
+
+            document.getElementById("h1").innerHTML = res
+        }
+        function sub()
+        {
+            let res = parseInt(num1.value)-parseInt(num2.value)
+
+            document.getElementById("h1").innerHTML = res
+        }
+        function mul()
+        {
+            let res = parseInt(num1.value)*parseInt(num2.value)
+
+            document.getElementById("h1").innerHTML = res
+        }
+        function divi()
+        {
+            let res = parseInt(num1.value)/parseInt(num2.value)
+
+            document.getElementById("h1").innerHTML = res
+        }
+    </script>
+    
+</body>
+</html>

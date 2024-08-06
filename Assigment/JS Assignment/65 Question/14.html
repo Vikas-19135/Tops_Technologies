@@ -1,0 +1,32 @@
+<!-- Write a JavaScript exercise to get the extension of a filename.?  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getFileExtension(filename) {
+        // Split the filename by dot (.)
+        let parts = filename.split('.');
+        
+        // Get the last part (extension)
+        let extension = parts[parts.length - 1];
+        
+        return extension;
+    }
+
+        // Example usage
+        let filename1 = "example.txt";
+        let filename2 = "script.js";
+
+        console.log("Extension of", filename1, "is:", getFileExtension(filename1));
+        console.log("Extension of", filename2, "is:", getFileExtension(filename2));
+
+    </script>
+</body>
+</html>

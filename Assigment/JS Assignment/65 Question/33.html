@@ -1,0 +1,33 @@
+<!-- Write to print Fibonacci series up to given numbers?  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonacciSeries(limit) {
+        let fibonacci = [];
+        fibonacci[0] = 0;
+        fibonacci[1] = 1;
+
+        for (let i = 2; fibonacci[i - 1] + fibonacci[i - 2] <= limit; i++) {
+            fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+        }
+
+        console.log("Fibonacci series up to " + limit + ":");
+        for (let i = 0; i < fibonacci.length; i++) {
+            console.log(fibonacci[i]);
+        }
+    }
+
+// Example usage:
+const limit = 50;
+fibonacciSeries(limit);
+    </script>
+</body>
+</html>

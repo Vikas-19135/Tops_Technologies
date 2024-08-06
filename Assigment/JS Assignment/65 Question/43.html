@@ -1,0 +1,41 @@
+<!-- Write a JavaScript program to convert an array of objects into CSV string? -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function convertArrayOfObjectsToCSV(data) {
+        const keys = Object.keys(data[0]);
+
+        // Extract header row
+        let csv = keys.join(',') + '\n';
+
+        // Extract data rows
+        data.forEach(item => {
+            const row = keys.map(key => {
+            return item[key];
+            });
+            csv += row.join(',') + '\n';
+        });
+
+        return csv;
+        }
+
+        // Example usage:
+        const data = [
+        { name: 'John', age: 30, city: 'New York' },
+        { name: 'Alice', age: 25, city: 'Los Angeles' },
+        { name: 'Bob', age: 35, city: 'Chicago' }
+        ];
+
+        const csvString = convertArrayOfObjectsToCSV(data);
+        console.log(csvString);
+
+    </script>
+</body>
+</html>

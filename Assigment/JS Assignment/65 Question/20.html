@@ -1,0 +1,40 @@
+<!-- What is the difference between && and || in JavaScript?
+
+-> && (Logical AND):
+
+The && operator returns true if both operands are true.
+If the first operand is false, it stops evaluating and returns the first operand. Otherwise, it returns the second
+operand.
+It is often used in conditional statements and expressions where both conditions need to be true for the overall
+condition to be true.
+
+-> || (Logical OR):
+
+The || operator returns true if at least one of the operands is true.
+If the first operand is true, it stops evaluating and returns the first operand. Otherwise, it returns the second
+operand.
+It is often used in conditional statements and expressions where at least one condition needs to be true for the overall
+condition to be true. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let x = 5;
+        // let y = 10;
+        if (x > 0 && y < 15) {
+            // This block will execute because both conditions are true
+        }
+        let x = 5;
+        let y = 10;
+        if (x > 0 || y > 15) {
+            // This block will execute because at least one condition is true
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- What is the result of the expression (true && 1 && "hello")? -->
+
+<!-- -> In JavaScript, the && operator performs a logical AND operation. It returns the first operand if it evaluates to false, otherwise, it returns the second operand.
+
+Let's break down the expression (true && 1 && "hello"):
+
+true evaluates to true.
+1 is considered truthy.
+"hello" is also considered truthy.
+So, when you chain them together with &&, it returns the last truthy value, which is "hello".
+
+Here's the JavaScript code: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(true && 1 && "hello"); // Output: "hello"
+    </script>
+</body>
+</html>

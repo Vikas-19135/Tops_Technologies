@@ -1,0 +1,30 @@
+Split the string into an array using split() Method?
+
+Certainly! The `split()` method in JavaScript is used to split a string into an array of substrings based on a specified separator. Here's how you can use it:
+
+
+In this example:
+
+- The `split(",")` method splits the string `str` at each occurrence of the comma `,`.
+- The resulting array `arr` contains the substrings "Hello" and " World!".
+
+You can specify any separator you want to split the string, including a space, a comma, a hyphen, or even a regular expression. For example:
+
+This splits the string `str` at each occurrence of the comma `,` and creates an array with the substrings "apple", "banana", and "orange".
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = "Hello, World!";
+        const arr = str.split(","); // Splitting the string at comma ","
+        console.log(arr); // Output: ["Hello", " World!"]
+    </script>
+</body>
+</html>

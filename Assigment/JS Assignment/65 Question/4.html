@@ -1,0 +1,41 @@
+Write a mul Function Which will Work Properly When invoked With Following Syntax.
+
+-> To create a mul function that works properly with the syntax you provided, which is likely invoking it with multiple
+arguments separated by commas, you can define the function to accept a variable number of arguments using the JavaScript
+rest parameter syntax (...). Here's how you can do it
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mul(...args) {
+            if (args.length === 0) {
+                return 0; // If no arguments provided, return 0
+            } else {
+                return args.reduce((accumulator, currentValue) => accumulator * currentValue);
+            }
+        }
+
+        // Examples of invoking mul function
+        console.log(mul()); // Output: 0 (No arguments provided, returns 0)
+        console.log(mul(2)); // Output: 2 (Only one argument provided)
+        console.log(mul(2, 3)); // Output: 6 (Two arguments provided)
+        console.log(mul(2, 3, 4)); // Output: 24 (Three arguments provided)
+        console.log(mul(2, 3, 4, 5)); // Output: 120 (Four arguments provided)
+
+    </script>
+</body>
+
+</html>
+
+<!-- in this code :
+        The mul function accepts a variable number of arguments using the rest parameter ...args.
+        Inside the function, it checks if no arguments are provided, in which case it returns 0.
+        If arguments are provided, it uses the reduce method to multiply all the arguments together and returns the result -->

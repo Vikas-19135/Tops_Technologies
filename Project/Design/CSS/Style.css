@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* Nav Start */
+.nav{
+    background-color: #2b3c53;
+}
+.nav .nav-logo{
+    padding: 25px 0;
+}
+.nav .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-ul .nav-li{
+    display: inline-block;
+    padding: 0 20px;
+    color: #ffffff;
+}
+.nav .col a{
+   text-decoration: none;
+   color: #ffffff;
+   font-size: 21px;
+   font-weight: 500;
+   font-family: "Poppins";
+}
+.nav .col .nav-icon a{
+    padding: 0 20px;
+}  
+/* Nav End */
+
+/* Header Start */
+.header{
+    background: url("/Images/Header\ img\ 1.png"), url("/Images/Header\ back\ img.png");
+    background-size: 450px 600px,100% 100%;
+    background-repeat: no-repeat;
+    background-position: -145px -100px,100% 100%;
+}
+.header .header-contain{
+    padding: 60px;
+    color: #2b3c53;
+}
+.header .header-contain h1{
+    font-size: 83px;
+    width: 60%;
+    font: bold;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: "Righteous";
+    text-align: center;
+}
+.header .header-contain h5{
+    width: 60%;
+    padding: 25px 0;
+    font-size: 33px;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 600;
+    font-family: "Poppins";
+    text-align: center;
+}
+.header .header-contain p{
+    width: 45%;
+    padding: 25px 0;
+    font-size: 25px;
+    letter-spacing: 1px;
+    line-height: 33px;
+    font-weight: 400;
+    font-family: "Poppins";
+    text-align: center;
+}
+/* .header .header-contain button{
+   width: 301px;
+   border-radius: 25px;
+   font-size: 21px;
+   line-height: 30px;
+   color: #fcfcfc;
+   background-color: #2b3c53;
+   font-weight: 400;
+   font-family: "Poppins";
+   text-align: center;  
+   align-items: center;
+   margin: 0 auto;
+} */
+.header .header-contain h1,h5,p,button{
+    margin: 10px auto;
+}
+
+/* Header End */
+
+
+/* Section 1 Start */
+.sec1{
+    background: url("/Images/Section\ 1\ background\ img.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.sec1 .row{
+    display: flex;
+}
+.sec1 .row .col{
+    padding: 150px 0;
+    margin-bottom: 150px;
+    width: 50%;
+}
+.sec1 .sec1-contain{
+    text-align: left;
+    color: #ffffff;
+    padding: 30px;
+}
+.sec1 .sec1-contain h2{
+    font-size: 80px;
+    font-weight: 700;
+    font-family: "Righteous";
+    margin: 0px 60px;
+}
+.sec1 .sec1-contain p{
+    width: 85%;
+    padding: 35px;
+    font-size: 25px;
+    line-height: 36px;
+    font-weight: 400;
+    margin: 0px 25px;
+    font-family: "Poppins";
+}
+.sec1 .sec1-contain button{
+    width: 30%;
+    border-radius: 25px;
+    font-size: 21px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    color: #5e9a62;
+    font-weight: 600;
+    font-family: "Poppins";
+    text-align: center;
+    margin: 0px 55px;
+}
+/* Section 1 End */
+
+/* Section 2 Start */
+.sec2{
+    background-color: white;
+}
+.sec2 .main-header{
+    text-align: center;
+    padding: 100px 0;
+    font-size: 50px;
+}
+.sec2 .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec2 .row .col{
+    width: 33.33%;
+}
+.sec2 .row .col .card-contain{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.sec2 .row .col .card-contain h3{
+    font-size: 30px;
+}
+.sec2 .row .col .card-contain p{
+    font-size: 25px;
+}
+/* <!-- Section 2 End --> */
+
+/* Section 3 Start */
+.sec3{
+    background-color: #2b3c53;
+    color: white;
+}
+.sec3 .row{
+    display: flex;
+}
+.sec3 .row .col{
+    width: 50%;
+    margin: 0 40px;
+}
+.sec3 .row .col .sec3-header{
+    font-size: 80px;
+    padding: 40px 0;
+}
+.sec3 .row .col .sec3-contain ul{
+    padding: 30px 0;
+}
+.sec3 .row .col .sec3-contain ul li{
+    padding: 10px 0;
+    font-size: 20px;
+}
+.sec3 .row .col .sec3-services{
+    font-size: 35px;
+    padding: 30px 0;
+    width: 60%;
+    margin: 0px 60px;
+    text-align: center;
+}
+.sec3 .row .col .sec3-download{
+    font-size: 35px;
+    padding: 30px 0;
+    width: 60%;
+    margin: 0px 60px;
+    text-align: center;
+}
+.sec3 .row .col .sec3-img{
+    padding: 80px;
+    margin: 0 auto;
+}
+/* Section 3 ENd */
+
+/* Section 4 Start  */
+.sec4{
+    background-color: #ffffff;
+    padding: 25px 0;
+}
+.sec4 .sec4-header{
+    text-align: center;
+    padding: 50px 0;
+    font-size: 40px;
+}
+.sec4 .row{
+    display: flex;
+    padding-bottom: 20px;
+}
+.sec4 .row .col{
+    width: 50%;
+}
+.sec4 .row .col p{
+    margin: 80px 50px;
+    padding-left: 50px;
+    font-size: 25px;
+    width: 80%;
+    text-align: left;
+}
+.sec4 .row .col button{
+    margin-left: 100px;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+/* Section 4 End */
+
+/* Footer Start */
+.foot {
+    background-color: #2b3c53;
+    padding: 50px 0;
+}
+.foot .row{
+    display: flex;
+}
+.foot .row .col-40{
+    width: 40%;
+}
+.foot .row .col-60{
+    width: 60%;  
+}
+.foot .col-60 .row .col{
+    width: 33.33%;
+}
+.foot-contain{
+    padding: 10px;
+}
+.foot .foot-h3{
+    font-size: clamp(20px,2.8vw,35px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Oswald";
+}
+.foot .foot-ul{
+    list-style: none;
+    margin: 10px 0;
+}
+.foot .foot-ul .foot-li{
+    margin: 10px 0;
+}
+.foot a{
+    font-size:  clamp(16px,2.2vw,20px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-decoration: none;
+}
+.foot-p{
+    width: 80%;
+    margin: 10px 0;
+    font-size:  clamp(16px,2.4vw,20px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

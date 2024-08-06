@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .abc{
+            width: 50%;
+            color: lightcoral;
+            background:linear-gradient(red,blue,green);
+            padding: 20px;
+            /* margin: 0 auto; */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">heading1</h1>
+
+    <button onclick="add()">add</button>
+    <button onclick="remove()">remove</button>
+    <button  onclick="toggle()">toggle</button>
+    <script>
+        var h1_tag = document.getElementById("h1");
+
+        function add()
+        {
+            h1_tag.classList.add("abc")
+        }
+        function remove()
+        {
+            h1_tag.classList.remove("abc")
+        }
+
+        function toggle()
+        {
+            h1_tag.classList.toggle("abc")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-card{
+            height: 350px;
+            width: 230px;
+            border: 2px solid;
+            margin: 100px auto;
+            position: relative;
+        }
+        .main-card .new{
+            padding: 10px;
+            width: 40px;
+            background-color: aqua;
+            position: absolute;
+            right: 0;
+        }
+        .main-card .img{
+            position: absolute;
+            top: 35px;
+            height: 200px;
+            width: 100%;
+        }
+        .main-card .contain{
+            height: 130px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: aqua;
+        }
+        .main-card .contain a{
+            text-decoration: none;
+            color: red;
+        }
+        .main-card .contain p del{
+            opacity: 0.5;
+        }
+        .main-card .contain button{
+            background-color: lightcoral;
+            padding: 5px 10px;
+            border: 0;
+            border-radius: 5px;
+            width: 60%;
+        }
+        .main-card .quick{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            top: 0;
+            transition: 1s;
+            opacity: 0;
+            z-index: 1;
+        }
+        .quick:hover{
+            background-color: aquamarine;
+            color: black;
+        }
+        .main-card:hover .quick{
+            top: 180px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-card">
+        <div class="quick">
+            QUICK VIEW
+        </div>
+        <div class="new">new</div>
+        <div class="img">
+            <img src="/imges/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+        <div class="contain">
+            <p><a href="">Formal Blue Shirt</a></p>
+            <p>$45.99 <del>$69.71</del></p>
+            <button>Shop now</button>
+        </div>
+    </div>
+</body>
+</html>

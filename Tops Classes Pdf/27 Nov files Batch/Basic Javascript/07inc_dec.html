@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inc ++ value 
+    dec --  value -->
+
+    <!-- predefine :- x++ 
+    postdefine :- ++x -->
+
+    <script>
+        var x = 7
+        document.write(x++,"<br>"); //7
+        document.write(x,"<br>"); //8
+        document.write(++x,"<br>") //9
+        document.write(++x,"<br>") //10
+        document.write(++x,"<br>") //11
+        document.write(x++,"<br>") //11
+        document.write(++x,"<br>") //13
+        document.write(x++,"<br>") //13
+        document.write(++x,"<br>") //15
+        document.write(x)
+
+        document.write("dec <br>")
+        document.write(x--,"<br>"); //15
+        document.write(x,"<br>");  //14
+        document.write(--x,"<br>") //13
+        document.write(x--,"<br>") //13
+        document.write(--x,"<br>") //11
+        document.write(x--,"<br>") //11
+        document.write(--x,"<br>") //9
+        document.write(x--,"<br>") //9
+        document.write(--x,"<br>")  //7
+        document.write(x)
+
+    </script>
+</body>
+</html>

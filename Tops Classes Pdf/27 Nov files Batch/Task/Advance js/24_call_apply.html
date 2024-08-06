@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students ={
+            fullname:function(city,courty)
+            {
+                return this.fname + " " + this.lname + " " + city + " " + courty;
+            }
+        }
+
+        const Student1 = {
+            fname:"chirag",
+            lname:"patel"
+        }
+
+        const Student2 = {
+            fname:"vikas",
+            lname:"patel"
+        }
+
+        // call method  sprate parametre
+        console.log(students.fullname.call(Student1,"Surat","india"))
+
+        // apply method as array
+        console.log(students.fullname.apply(Student2,["ahe","india"]))
+    </script>
+</body>
+</html>

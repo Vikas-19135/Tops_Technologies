@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- json:- javascript object Notation 
+    json:- data store and trnser
+    json :-  restfull api (application progrming interface) 
+    json :-  easy understand access 
+    json :-  lighwight cross browser data -->
+
+    <!-- stytax 
+
+    obj1 = [
+        id:1,
+        name:"chirag",
+        course :"front"
+    ]
+
+    json = `[
+        "id":1,
+        "name":"chirag",
+        "course":"front"
+    ]` -->
+
+    <script>
+        // json data 
+        const jsondata = `[
+            {
+                "id":1,
+                "name":"chirag",
+                "course":"front",
+                
+            },
+            {
+                "id":2,
+                "name":"vikas",
+                "course":"full-stack"
+            },
+            {
+                "id":3,
+                "name":"brijesh",
+                "course":"MERN-stack"
+            }
+        ]`
+
+        console.log(jsondata)
+        // convert jsondata object json.parse
+        const obj1 = JSON.parse(jsondata)
+        console.log(obj1)
+
+        for (let name1 of obj1) {
+            // console.log(name1)
+            document.write(`id :- ${name1.id} name :- ${name1.name} , course :-  ${name1.course}  <br>`)
+        }
+
+
+        const obje2 = [
+            {
+                id: 1,
+                name: "chirag"
+              
+            },
+            {
+                id: 2,
+                name: "vikas"
+              
+            },
+            {
+                id: 3,
+                name: "brijesh"
+                
+            }
+        ]
+
+        console.log(obje2)
+
+        // object to json :- json string
+        const json1 = JSON.stringify(obje2)
+        
+        console.log(json1)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <h1>hello JQuery</h1>
+
+    <button class="bt1">fadeout</button>
+    <button class="bt2">fadein</button>
+    <button class="bt3">fadetoggle</button>
+    <button class="bt4">FadeTo</button>
+
+    <script>
+        $(document).ready(function(){
+            $(".bt1").click(function(){
+                $("h1").fadeOut(1000)
+            })
+            $(".bt2").click(function(){
+                $("h1").fadeIn(1000)
+            })
+            $(".bt3").click(function(){
+                $("h1").fadeToggle(1000)
+            })
+            $(".bt4").click(function(){
+                $("h1").fadeTo("fast",0.4)
+            })
+            
+        })
+    </script>
+</body>
+</html>

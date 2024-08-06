@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .triagle{
+            height: 200px;
+            width: 200px;
+            background-color: lightcoral;
+
+            /* clip-path: circle(35%); */
+            /* clip-path: polygon(x y,x y, x y); */
+            margin: 0 auto;
+            clip-path: polygon(50% 0%,100% 100%,0% 100%);
+        }
+        .pol{
+            height: 200px;
+            width: 200px;
+            background-color: lightblue;
+            margin: 10px auto;
+            clip-path: polygon(50% 0%,100% 20%,100% 80%,50% 100%,0% 80%,0% 20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="triagle">
+
+    </div>
+    <div class="pol"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // promise :- js no bulit-in-class
+
+
+        function display(xyz)
+        {
+            console.log(xyz)
+        }
+
+        const obj = new Promise(function(success,failure){
+            if(!success)
+            {
+                success("Conneted...!")
+            }
+            else{
+                failure("not a Conneted....!")
+            }
+        })
+
+        obj.then(
+            function(res){display(res)},
+            function(err){display(err)}
+        )
+    </script>
+</body>
+</html>

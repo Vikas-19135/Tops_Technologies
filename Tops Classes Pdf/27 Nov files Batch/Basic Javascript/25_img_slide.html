@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/img/1.jpeg" alt="" height="350px" id="im1" width="100%">
+
+    <button onclick="clickn()">click</button>
+    <script>
+        var img1 = document.getElementById("im1")
+        console.log(img1)
+        console.log(img1.src)
+
+        function clickn()
+        {
+            if(img1.src.match("/img/1.jpeg"))
+            {
+                img1.src = "/img/2.jpeg"
+            }
+            else if(img1.src.match("/img/2.jpeg"))
+            {
+                img1.src = "/img/3.jpeg"
+            }
+            else if(img1.src.match("/img/3.jpeg"))
+            {
+                img1.src = "/img/4.jpeg"
+            }
+            else{
+                img1.src = "/img/1.jpeg"
+            }
+        }
+    </script>
+</body>
+</html>

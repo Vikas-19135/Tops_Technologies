@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="getText()">click</button>
+    <div id="op" style="background-color: red;"></div>
+
+
+    <!-- sytax:-
+    fetch('url',{
+        defult
+        method:"GET"
+    })
+    .then(file/json data object)
+    .then(function data) -->
+    <!-- promise -->
+
+    <script>
+        // onclick
+        function getText() {
+            // promise 
+            fetch("sample.txt", {
+                method: "GET"
+            })
+                // response convert object
+                .then((res) => res.text())
+                .then((res) => {
+                    console.log(res)
+                    document.getElementById("op").innerHTML = res
+                })
+        }
+
+    </script>
+
+</body>
+
+</html>

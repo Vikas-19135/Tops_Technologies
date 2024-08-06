@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ::  */
+        ul li::first-letter {
+            background-color: aquamarine;
+        }
+        div::first-line{
+            background-color: bisque;
+        }
+        div{
+            font-weight: bold;
+        }
+        div::selection{
+            color: brown;
+            background-color: aqua;
+        }
+        .before ul li::before{
+            content: "\c143";
+        }
+        .before ul li::after{
+            content: "c";
+        }
+
+    </style>    
+</head>
+
+<body>
+    <ul>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, maiores itaque? Ipsam consectetur quidem
+        accusamus dicta fugit voluptatem vel incidunt, exercitationem praesentium. Debitis eveniet dignissimos
+        praesentium beatae ab labore saepe?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, maiores itaque? Ipsam consectetur quidem
+        accusamus dicta fugit voluptatem vel incidunt, exercitationem praesentium. Debitis eveniet dignissimos
+        praesentium beatae ab labore saepe?
+    </div>
+    <div class="before">
+        <ul>
+            <li>dilip</li>
+            <li>het</li>
+            <li>vikas</li>
+            <li>chirag</li>
+        </ul>
+    </div>
+</body>
+
+</html>

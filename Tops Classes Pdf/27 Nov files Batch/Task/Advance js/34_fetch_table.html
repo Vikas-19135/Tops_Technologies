@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">click</button>
+    <table id="one" border="5" cellpadding="5" cellspacing="5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Url</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td>cell</td>
+            </tr> -->
+        </tbody>
+    </table>
+
+    <script>
+        btn1 = document.getElementById("btn")
+
+        btn1.addEventListener("click",getdata)
+        function getdata()
+        {
+            
+        const table = document.getElementById("one")
+        const tbody =document.querySelector("tbody")
+        // console.log(tbody)
+
+        fetch('https://jsonplaceholder.typicode.com/photos',{
+            method:"GET"
+        })
+        // json data convert object
+        .then((res)=> res.json())
+        .then((data)=>{
+            console.log(data)
+
+            data.forEach(user => {
+                console.log(user)
+
+                const row = tbody.insertRow()
+                const idcell = row.insertCell(0)
+                const titlecell = row.insertCell(1)
+                const urlcell = row.insertCell(2)
+
+
+                idcell.textContent = user.id
+                titlecell.textContent = user.title
+                urlcell.textContent = user.url
+            });
+        })
+
+        }
+    </script>
+</body>
+</html>

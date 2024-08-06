@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- enclupltion :- data to hide
+    abstrction :- allow to access only private data access. -->
+
+
+    <script>
+        function Person(name,age)
+        {
+            // data private enclupltion
+            let _name = name;
+            let _age = age;
+
+            // abstrction 
+            this.getName = function()
+            {
+                return _name;
+            }
+
+            this.getAge = function()
+            {
+                return _age;
+            }
+
+            this.setAge = function(newAge)
+            {   
+                if(newAge >= 0)
+                {
+                    _age = newAge
+                }
+                else{
+                    console.log("Age cannot be negative")
+                }
+            }
+        }
+
+        const person1 =new Person("chirag",23)
+
+        // data direct access
+        console.log(person1._name)
+    
+
+        console.log(person1.getName())
+        console.log(person1.getAge())
+
+        console.log(person1.setAge(30))
+        console.log(person1.getAge())
+        
+    </script>
+</body>
+</html>

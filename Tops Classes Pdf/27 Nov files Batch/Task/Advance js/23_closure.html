@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x =10 // gobal scope
+
+        function Test()
+        {
+            let x = 20 // local scope
+            let y =10
+            console.log(x + y)
+            console.log(y)
+        }
+
+        Test()
+        console.log(x) // this is not values assign
+    </script>
+</body>
+</html>

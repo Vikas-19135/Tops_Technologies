@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class perent
+        {
+            property = ()=>{
+                document.write("i give child","<br>")
+            }
+            property1 =()=>{
+                document.write("this is a son1","<br>")
+            }
+        }
+
+        class son extends perent
+        {
+            son =()=>{
+                document.write("first proprty","<br>")
+            }
+        }
+        class daughter extends perent
+        {
+            daughter =()=>{
+                document.write("secound property","<br>")
+            }
+        } 
+
+        const obj1 = new son
+        obj1.property()
+        obj1.son()
+
+        const obj2 = new daughter
+        obj2.daughter()
+        obj2.property1()
+        
+    </script>
+</body>
+</html>

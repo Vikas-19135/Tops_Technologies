@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- array :- multiple value store in sigle varible [] -->
+
+    <script>
+        // arry1 = ["person",234,35,5,true,null,366,456,"soui",[67,45,23]]
+        arry1 = ["person",234,35,5,true,366,456,"soui"]
+
+
+        // console.log(arry1[9][2])
+        // document.write(arry1)    
+
+        // adavnce
+        for(nav1 of arry1)
+        {
+            // value
+            document.write(nav1,"<br>")
+        }
+
+        for(let nav2 in arry1)
+        {
+            // value,index
+            document.write(nav2,"=>",arry1[nav2],"<br>")
+        }
+
+        arry1.forEach((value,key) => {
+            document.write(key,"=>",value,"<br>")
+        });1
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class artima 
+        {
+            constructor(a,b)
+            {
+                this.a = a;
+                this.b = b;
+            }
+            sum()
+            {
+                document.write(`add ==> ${this.a + this.b} <br>`)
+            }
+            sub=()=>{
+                document.write(`sub ==> ${this.a - this.b} <br>`)
+            }
+        }
+        
+        // artima class contrtuor value
+        const obj1 = new artima(30,10)
+        const obj2 = new artima(40,10)
+        obj1.sum()
+        obj1.sub()
+        obj2.sum()
+        obj2.sub()
+    </script>
+</body>
+</html>

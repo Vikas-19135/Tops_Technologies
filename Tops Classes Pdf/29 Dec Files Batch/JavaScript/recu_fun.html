@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function factorial(x) {
+            // 0 
+            if (x == 0) {
+                return 1
+            }
+            else{
+                // console.log("called x ",x);
+                // console.log("called x-1",x-1);
+                
+                return x*factorial(x-1)
+            }
+        }
+        let fact = factorial(5);
+        let fact1 = factorial(10)
+        console.log(fact);
+        console.log(fact1)
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scriptV 3.6.3.js"></script>
+</head>
+<body>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae soluta ratione labore eius dolorem veniam nostrum exercitationem voluptatibus, et ducimus possimus quas beatae quisquam recusandae nesciunt neque vero assumenda quod.
+    </p>
+
+    <button id="b1">fadeOut</button>
+    <button id="b2">fadeIn</button>
+    <button id="b3">fadeToggle</button>
+
+    <script>
+
+        
+        $('#b1').click(function(){
+
+            $('p').fadeOut();
+
+        })
+
+
+        $('#b2').click(function(){
+
+$('p').fadeIn(1000);
+
+})
+
+
+$('#b3').click(function(){
+
+$('p').fadeTo('fast',0.5);
+
+})
+
+    </script>
+    
+</body>
+</html>

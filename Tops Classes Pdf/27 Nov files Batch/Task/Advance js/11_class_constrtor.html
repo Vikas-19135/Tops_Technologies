@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Test
+        {
+           
+            x= function()
+            {
+                console.log("X is called")
+            }
+            y= function()
+            {
+                console.log("y is called")
+            }
+            z = function()
+            {
+                console.log("Z is called")
+            }
+            a = ()=>{
+                console.log("A is called")
+            }
+            // only have one contructor
+            constructor()
+            {
+                // super()
+                console.log("Automatically excuted direct object function constructor")
+            }
+            // constructor()
+            // {
+            //     console.log("sfdgkugukg")
+            // }
+            
+        }
+        const user = new Test;
+        user.x()
+        user.y()
+        user.z()
+        user.a()
+    </script>
+</body>
+</html>

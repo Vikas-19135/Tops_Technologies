@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scriptV 3.6.3.js"></script>
+</head>
+<body>
+
+    <h1 id="test">Heading</h1>
+    <div class="test123">Div tag</div>
+
+    <a href="x.html" >Link123</a>
+
+    <input type="text" value="Hello123" id="inp">
+
+    <img src="x.jpg" alt="No Image" height="100px" width="100px">
+
+    <div class="x"></div>  
+
+    <script>
+
+      //h1_tag =  document.getElementById('test');
+
+      h1_tag=  $('#test')
+
+    //   document.write("<br>" +$('#test').text() + "<br>")
+    //   document.write($('div').text()+"<br>")
+    //   document.write($('a').text()+ "<br><br>")
+    //   document.write($('input').val())
+
+
+    document.write("<br>" +$('#test').html() + "<br>")
+      document.write($('div').html()+"<br>")
+      document.write($('a').html()+ "<br><br>")
+
+    document.write($('input').attr('value'))
+
+    document.write("<br>id = " + $('h1').attr('id'))
+
+    document.write("<br>class = " + $('div').attr('class'))
+
+
+    // document.write(document.getElementById('inp').value)
+
+
+
+    </script>  
+</body>
+</html>

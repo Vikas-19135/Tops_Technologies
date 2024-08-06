@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="disp">
+
+    </div>
+
+    <p>Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, string
+        interpolation with embedded expressions, and special constructs called tagged templates.</p>
+    <p> Template literals are sometimes informally called template strings, because they are used most commonly for
+        string interpolation (to create strings by doing substitution of placeholders). However, a tagged template
+        literal may not result in a string; it can be used with a custom tag function to perform whatever operations you
+        want on the different parts of the template literal.</p>
+    <script>
+        // HTMLData = '<input type="text" name="" id="">'
+        // HTMLData = '    <table>
+        //     <tr>
+        //         <td>User Name</td>
+        //         <td><input type="text" name="" id=""></td>
+        //     </tr>
+        // </table>'
+       
+        
+        // HTMLData = '<input type="text" name="" id="">'
+        // HTMLData = '    <table>';
+        //     HTMLData += '<tr>';
+        //         HTMLData += '<td>User Name</td>';
+        //         HTMLData += '<td><input type="text" name="" id=""></td>';
+        //     HTMLData += '</tr>';
+        // HTMLData += '</table>'
+        // HTMLData = '<table> <tr> <td>User Name</td> <td><input type="text" name="" id=""></td> </tr> </table>'
+
+        let lableData = "last  Name : "
+    //     HTMLData = `<table>
+    //     <tr>
+    //         <td>User Name</td>
+    //         <td><input type="text" name="" id=""></td>
+    //     </tr>
+    // </table>`
+
+        HTMLData = `<table>
+        <tr>
+            <td>${lableData}</td>
+            <td><input type="text" name="" id=""></td>
+        </tr>
+    </table>`
+        document.getElementById("disp").innerHTML = HTMLData
+    </script>
+</body>
+
+</html>

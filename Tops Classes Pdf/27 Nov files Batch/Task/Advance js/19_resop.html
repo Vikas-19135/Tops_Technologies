@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (...) rest , (...) spared -->
+    <script>
+
+        // (x,y,..)
+        var x=function(...mahi)
+        {
+            sum = 0
+            for(var dhoni in mahi)
+            {
+                // sum = 0 + 1
+                // sum = 1 + 2
+                // sum = 3 + 34
+                sum = sum + mahi[dhoni]
+            }
+            return sum;
+        }
+        document.write(x(1,2,34,66,78,5,43),"<br>")
+        document.write(x(34,5,54365,677,87,453,4234))
+    </script>
+
+
+</body>
+</html>

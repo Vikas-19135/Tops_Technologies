@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Vikas
+        {
+           constructor(fn,ln)
+           {    
+            this.fn =fn;
+            this.ln = ln;
+            return this.fn + " " + this.ln 
+           } 
+
+        }
+        const obj1 = new Vikas("chirag","patel")
+        // obj1.fn
+        console.log(obj1.fn)
+        console.log(obj1.ln)
+
+        
+        function Test(fname,lanme)
+        {
+            this.fname = fname;
+            this.lanme = lanme
+            return (this.fname + this.lanme);
+        }
+        const vikas = new Test("vikas","patel")
+        // object . 
+        console.log(vikas.fname + " " + vikas.lanme)
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ul li{
+            background-color: aqua;
+        } */
+        ul li:first-child
+        {
+            background-color: red;
+        }
+        ul li:last-child{
+            background-color: aqua;
+        }
+        ul li:nth-child(odd){
+            color: brown;
+            background-color: lightcoral;
+        }
+        ul li:nth-child(even){
+            color:bisque;
+            background-color: lawngreen;
+        }
+        .square{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            transition: 2s;
+        }
+        .square:hover{
+            background-color: aqua;
+            /* border-radius: 50%; */
+            /* transform: rotate(50deg); */
+            /* transform: scale(0.7); */
+            /* transform: skew(-10deg); */
+            transform: translate(20px,20px);
+            cursor: pointer;
+        }
+        input{
+            margin: 20px;
+            border: 0;
+            outline: none;
+        }
+        input:focus{
+            background-color: aqua;
+            color: red;
+            border: 5px solid gold;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- :  pesudo_class 
+    :: pesudo_elements -->
+
+    <ul>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+    </ul>
+    <ul>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+    </ul>
+
+    <div class="square"></div>
+
+    <form action="">
+        <input type="text" placeholder="Enter your name">
+    </form>
+</body>
+</html>

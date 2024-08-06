@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- primitive :-sigle
+    no-primivite : -  multiple :- array,object 
+
+    array :- it is a multiple value store in single varible .
+            => symbole:-[]. array alwyas index 0. -->
+
+    <script>
+        var arr1 = [23,"shubham","jadav","het","Js",3435,true,null]
+                    // 0,1,2,3,4,5,6,7 
+        console.log(arr1)   
+        console.log(arr1[2])
+        console.log(arr1[6])
+
+        document.write(arr1)
+        document.write("<br>",arr1[0])
+        document.write("<br>",arr1.length)
+
+        document.write("<br>print  <br>")
+
+        // simple loop
+        // for(i=0;i<arr1.length;i++)
+        // {
+        //     document.write(arr1[i],"<br>")
+        // }
+
+        // for(test of arr1)
+        // {
+        //     // value
+        //     document.write(test,"<br>")
+        // }
+
+        for(test in arr1)
+        {
+            // index,test
+            //arr1[test] : -values
+            document.write(test,"=>",arr1[test],"<br>")
+        }
+
+        // arr1.forEach(element,index => {
+        //     document.write(element)
+        // });
+    </script>
+
+</body>
+</html>

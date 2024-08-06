@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- function overloading,function oervrding -->
+    <!-- function overloading :- not possible :- same name of function in diffent way parameters same class -->
+    <!-- function overring :- function name same diffent parent way differnt class  -->
+    <script>
+        // class A
+        // {
+        //     // function over loding
+        //     sum(a,b)
+        //     {
+        //         document.write(a+b)
+        //     }
+        //     sum(a,b,c)
+        //     {
+        //         document.write(a+b+c)
+        //     }
+        // }
+
+        // obj = new A
+        // obj.sum(10,20)
+        // obj.sum(20,30,20)
+
+        // function overring
+        class A 
+        {
+            display()
+            {
+                document.write("A display <br>")
+            }
+        }
+        class B extends A
+        {
+            display()
+            {
+                document.write("B Display <br>")
+            }
+        }
+        class C extends B
+        {
+            display()
+            {
+                document.write("C Display <br>")
+            }
+        }
+        var obje1 = new C
+        // obje1.display()
+
+        //solve
+        var obje = [new A(),new B(),new C()]
+        console.log(obje) 
+        obje.forEach((value)=>{value.display()})
+
+    </script>
+</body>
+</html>

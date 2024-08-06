@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" placeholder="enter your" id="num1" onkeypress="add()"> -->
+    <input type="text" placeholder="enter your" id="num1" onkeyup="add()">
+    <textarea name="" id="texta" cols="30" rows="10"></textarea>
+    <button onclick="add()">add</button>
+
+
+    <script>
+        var num1 = document.getElementById("num1")
+        var texta = document.getElementById("texta")
+
+        function add()
+        {
+            texta.innerHTML = num1.value
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            overflow: hidden;
+        }
+        .bg{
+            background: url("https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom1.jpg");
+            width: 40%;
+            background-repeat: no-repeat;
+            background-size: cover;padding: 50px;
+            transform: translate(-20px,0);
+            transition: 1s;
+        }
+        .bg .text{
+            border: 2px solid white;
+            color: white;
+            padding: 40px;
+            text-align: right;
+            transform: translate(-20px,0);
+            transition: 1s;
+            opacity: 0;
+        }
+        .card:hover .bg{
+            transform: translate(0px,0);
+        }
+        .card:hover .text{
+            transform: translate(0px,0);
+           opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="bg">
+            <div class="text">
+                <h1>FALL AHEAD</h1>
+                <h4>New Arrivals</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

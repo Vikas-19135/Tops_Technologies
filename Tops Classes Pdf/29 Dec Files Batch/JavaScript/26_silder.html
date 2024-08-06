@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="/imges/1.jpeg" height="100%" width="100%" alt="" id="n1">
+    </div>
+
+    <button onclick="chnage1()">click</button>
+
+    <script>
+        var img_tag = document.getElementById("n1")
+        console.log(img_tag) 
+        console.log(img_tag.src)
+
+        function chnage1(){
+            if(img_tag.src.match("/imges/1.jpeg")){
+                img_tag.src = "/imges/2.jpeg";
+            }
+            else if(img_tag.src.match("/imges/2.jpeg")){
+                img_tag.src = "/imges/3.jpeg"
+            }
+            else if(img_tag.src.match("/imges/3.jpeg")){
+                img_tag.src ="/imges/4.jpeg"
+            }
+            else{
+                img_tag.src = "/imges/1.jpeg"
+            }
+        }
+    </script>
+</body>
+</html>

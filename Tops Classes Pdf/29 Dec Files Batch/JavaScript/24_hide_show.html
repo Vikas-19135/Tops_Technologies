@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .addc{
+            width: 50%;
+            margin: 40px;
+            font-size: 70px;
+            background:linear-gradient(red,green,blue);
+            border: 10px solid rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">heading</h1>
+
+    <button onclick="hide()">hide</button>
+    <button onclick="show()">show</button>
+    <button onclick="toggle()">toggle</button>
+
+    <script>
+        h1_tag = document.getElementById("h1")
+
+        function show()
+        {
+            h1_tag.classList.add("addc")
+            console.log("called")
+        }
+        function hide()
+        {
+            h1_tag.classList.remove("addc")
+            console.log("called")
+        }
+
+        function toggle()
+        {
+            h1_tag.classList.toggle("addc")
+        }
+    </script>
+</body>
+</html>

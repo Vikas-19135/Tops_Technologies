@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 400px;
+            width: 100%;
+        }
+        .adds{
+            animation: identifier 1s;
+        }
+        @keyframes identifier {
+            from{transform: scale(1);}
+            to{transform: scale(1.2);}
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="/img/1.jpeg" height="100%" width="100%" alt="" class="img1">
+        <img src="/img/2.jpeg" height="100%" width="100%" alt="" class="img1">
+        <img src="/img/3.jpeg" height="100%" width="100%" alt="" class="img1">
+        <img src="/img/4.jpeg" height="100%" width="100%" alt="" class="img1">
+    </div>
+
+    <script>
+        var img1_tag =document.getElementsByClassName("img1")
+        console.log(img1_tag)
+
+        index = 0 
+
+        function silder()
+        {
+            for(i=0;i<img1_tag.length;i++)
+            {
+                // none
+                img1_tag[i].style.display = "none";
+
+                img1_tag[i].classList.add("adds")
+            }
+            // one block
+            img1_tag[index].style.display="block";
+            index++;  //1//2//3//4
+
+            // codition 
+            if(index == 4)
+            {
+                index=0
+            }
+
+            setTimeout("silder()",1000)
+
+        }
+        silder()
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+            /* display: none; */
+        }
+        .anima{
+            animation: identifier 1s;
+        }
+        @keyframes identifier {
+            from{transform: scale(1);}
+            to{transform: scale(1.2);}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="/imges/1.jpeg" height="100%" width="100%" alt="" class="im1">
+        <img src="/imges/2.jpeg" height="100%" width="100%" alt="" class="im1">
+        <img src="/imges/3.jpeg" height="100%" width="100%" alt="" class="im1">
+        <img src="/imges/4.jpeg" height="100%" width="100%" alt="" class="im1">
+    </div>
+
+    <script>
+        var img1_tag = document.getElementsByClassName("im1");
+        console.log(img1_tag)
+
+        index = 0
+        function silder()
+        {
+            for(i=0;i<img1_tag.length;i++)
+            {
+                img1_tag[i].style.display = "none";
+                img1_tag[i].classList.add("anima")
+            }
+            img1_tag[index].style.display = "block";
+            index++;
+
+            // codition 
+            if(index == 4)
+            {
+                index=0
+            }
+            setTimeout("silder()",1000)
+        }
+        silder()
+
+    </script>
+</body>
+</html>

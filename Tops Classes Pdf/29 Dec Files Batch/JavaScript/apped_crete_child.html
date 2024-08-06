@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" onblur="checkreq(this)" name="" id="">
+
+    <div id="data"></div>
+
+    <script>
+
+        // document.getElementsByTagName("img ")
+        // document.querySelector("#id")
+        // document.querySelector(".class")
+        // document.querySelectorAll("#id")
+        // document.querySelectorAll(".class")
+
+        function checkreq(e) {
+            let div = document.getElementById("data")
+            var closeSpan = document.createElement("span");
+            closeSpan.setAttribute("id", "errorspn");
+            closeSpan.textContent = "This field is required";
+            if (e.value == "") {
+                div.appendChild(closeSpan);
+                console.log("inside else");
+            } else {
+                console.log("inside else");
+                SpanElement = document.getElementById("errorspn")
+                console.log(SpanElement);
+                div.removeChild(SpanElement);
+            }
+            // let p = document.createElement("p");
+        }
+
+        // let div = document.createElement("div");
+        // div.append("Some text");
+
+        // let p = document.createElement("p");
+        // div.append(p);
+        // console.log(div.childNodes); // NodeList [ <p> ]
+        // console.log(div.textContent); // "Some text"
+
+        // let div = document.createElement("div");
+        // // let p = document.createElement("p");
+        // var closeSpan = document.createElement("span");
+        // closeSpan.setAttribute("id", "errorspn");
+        // closeSpan.textContent = "Close";
+        // div.appendChild(closeSpan);
+
+        // console.log(div.childNodes); // NodeList [ #text "Some text", <p> ]
+
+        // count = 50
+        // var spn = document.createElement("span");
+        // spn.textContent = count + ".";
+        // main.appendChild(spn);
+
+        // var text = document.createTextNode(exercise);
+        // main.appendChild(text);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="n1" placeholder="Enter your num1">
+    <input type="text" id="n2" placeholder="Enter your num2">
+
+    <button onclick="add()">add</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="multi()">multi</button>
+    <button onclick="divi()">divi</button>
+
+   <div id="div"></div>
+
+   <script>
+    num1 = document.getElementById("n1")
+    num2 = document.getElementById("n2")
+
+    function add()
+    {
+        result = parseFloat(num1.value) + parseFloat( num2.value)
+        // console.log(result)
+        document.getElementById("div").innerHTML = `<h1>${result}</h1>`
+    }
+    
+    function sub()
+    {
+        result = parseFloat(num1.value) - parseFloat( num2.value)
+        // console.log(result)
+        document.getElementById("div").innerHTML = `<h1>${result}</h1>`
+    }
+    function multi()
+    {
+        result = parseFloat(num1.value) * parseFloat( num2.value)
+        // console.log(result)
+        document.getElementById("div").innerHTML = `<h1>${result}</h1>`
+    }
+    function divi()
+    {
+        result = parseFloat(num1.value) / parseFloat( num2.value)
+        // console.log(result)
+        document.getElementById("div").innerHTML = `<h1>${result}</h1>`
+    }
+   </script>
+</body>
+</html>

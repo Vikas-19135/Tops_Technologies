@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inheritnce:- most import :- one peroperty to anthor peroperty class -->
+    <!-- 5 type :- 
+    1) single inheritnce :- one to two
+    2) multi-level inheritnce :- one to two to three
+    3) muliple inheritnce :- not possible javascipr / python,java /
+    4) hirachical inheritnce :- 1 parent / 2child 
+    5) hybrid inheritnce :-  -->
+
+    <script>
+        // single
+        // class A 
+        // {
+        //     sum(a,b)
+        //     {
+        //         var sum 
+        //         sum = a+b 
+        //         document.write("sum=>",sum,"<br>")
+        //     }
+        // }
+        // class B extends A
+        // {
+        //     sub(a,b)
+        //     {
+        //         var sub 
+        //         sub = a-b
+        //         document.write("sub=>",sub,"<br>")
+        //     }
+        // } 
+
+        // const b1 = new B
+        // b1.sum(10,10)
+        // b1.sub(20,10)
+
+
+         class A 
+        {
+            sum(a,b)
+            {
+                var sum 
+                sum = a+b 
+                document.write("sum=>",sum,"<br>")
+            }
+        }
+        class B extends A
+        {
+            sub(a,b)
+            {
+                var sub 
+                sub = a-b
+                document.write("sub=>",sub,"<br>")
+            }
+        } 
+        class C extends B
+        {
+            mul(a,b)
+            {
+                var mul
+                mul = a*b
+                document.write("mul=>",mul,"<br>")
+            }
+        }
+        const obj1 = new C
+        obj1.sum(30,30)
+        obj1.sub(30,10)
+        obj1.mul(10,10)
+
+
+
+    </script>
+</body>
+</html>

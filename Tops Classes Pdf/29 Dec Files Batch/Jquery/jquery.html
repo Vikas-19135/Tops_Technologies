@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <p id="par" class="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus illo eligendi facilis
+        voluptas placeat, vel eaque cupiditate vero. Quod doloribus nostrum incidunt eum vitae dolor voluptates non odit
+        quo nulla!</p>
+        
+    <button class="hide" id="hide">hide</button>
+    <button class="show" id="show">show</button>
+    <button class="tog">hide/show</button>
+
+    <script>
+        $('.hide').click(function(){
+            $('.par').hide();
+        })
+        $('.show').click(function(){
+            $('.par').show();
+        })
+        $('.tog').click(function(){
+            $('.par').toggle(2000);
+        })
+        
+    </script>
+</body>
+
+</html>

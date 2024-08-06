@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="scriptV 3.6.3.js"></script>
+
+    <style>
+        .xyz 
+        {
+            height: 100px;
+            width: 100px;
+            background: coral;
+            font-size: 30px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>BAS HAVE</h2>
+
+    <h1>
+        hello
+    </h1>
+
+    <button id="b1">Add CSS</button>
+    <button id="b2">remove CSS</button>
+    <button id="b3">Add/Remove CSS</button>
+
+    <script>
+
+        $('h2').css({"color":"red","background":"green","height":"200px","width":"200px"})
+
+
+// $('selector').css('property',"value")
+       
+$('#b1').click(function (){
+
+    // $('h1').css("color","red");
+    //     $('h1').css("height","100px");
+    //     $('h1').css("width","100px");
+    //     $('h1').css("background","lightblue");
+    //     $('h1').css("font-size","20px");
+
+        $('h1').addClass('xyz')
+})
+
+$('#b2').click(function (){
+
+    $('h1').removeClass('xyz')
+})
+
+
+$('#b3').click(function (){
+
+    $('h1').toggleClass('xyz')
+})
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

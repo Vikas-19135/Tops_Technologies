@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="op"></div>
+
+    <script>
+        fetch('data.json',{
+            method:"GET"
+        })
+        .then((res)=>{
+            // object convert
+            return res.json()
+        })
+        .then((data)=>{
+            console.log(data)
+
+            output = `<h2>user data</h2>`
+
+            data.forEach(item => {
+                console.log(item)
+
+                output += `
+                    <ul>
+                        <li>${item.id}</li>
+                        <li>${item.name}</li>
+                        <li>${item.course}</li>
+                        <li>${item.address.city}</li>
+                        <li>${item.address.contry}</li>
+                    </ul>
+                `
+            });
+            document.getElementById('op').innerHTML = output
+
+        })
+    </script>
+
+</body>
+</html>

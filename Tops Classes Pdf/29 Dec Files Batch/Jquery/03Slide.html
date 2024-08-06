@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scriptV 3.6.3.js"></script>
+
+    <style>
+        .q 
+        {
+            border: 2px solid;
+            background-color: coral;
+        }
+        .a 
+        {
+            border: 2px solid;
+            background-color: coral;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="q">Question?</div>
+    <div class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor praesentium enim soluta similique, quis facilis non voluptate eaque exercitationem, officiis modi labore minima quaerat molestiae ea! Doloremque ducimus illum perspiciatis.</div>
+
+    <script>
+        // $('.q').click( ()=>{
+
+        //     $('.a').slideUp();
+        // })
+
+        // $('.q').click( ()=>{
+
+        // $('.a').slideDown();
+        // })
+
+        $('.q').click( ()=>{
+
+$('.a').slideToggle(1000);
+})
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+[
+    {
+        "id":1,
+        "name":"chirag",
+        "course":"front-end",
+        "address":{
+            "city":"ahmedabad",
+            "contry":"india"
+        }
+
+    },
+    {
+        "id":2,
+        "name":"vikas",
+        "course":"Full-stack",
+        "address":{
+            "city":"ahmedabad",
+            "contry":"india"
+        }
+
+    },
+    {
+        "id":3,
+        "name":"shubham",
+        "course":"MERN-stack",
+        "address":{
+            "city":"Bharuch",
+            "contry":"india"
+        }
+
+    }
+
+]

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li:first-child{
+            background-color: red;
+        }
+        ul li:last-child{
+            background-color: aqua;
+        }
+        ul li:nth-child(5){
+            background-color: lightcoral;
+        }
+        ul li:nth-child(even){
+            background: navajowhite;
+        }
+        ul li:nth-child(odd){
+            background-color: blueviolet;
+        }
+        ul li:nth-last-child(5){
+            background: gold;
+        }
+        div{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            transition: 2s;
+        }
+        div:hover{
+            border-radius: 50%;
+            background-color: aqua;
+            transform: translate(100px,100px);
+        }
+        input{
+            margin: 20px;
+            border: none;
+            border: 5px dotted blue;
+            border-radius: 20px;
+        }
+        input:focus{
+            color: lightcoral;
+            background-color: aqua;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- : - psudeo class -->
+    <!-- :: -psudeo elements -->
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+    </ul>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+    </ul>
+
+    <div>
+
+    </div>
+
+    <form action="">
+        <input type="text" placeholder="enter your name">
+    </form>
+</body>
+</html>

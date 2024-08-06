@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Timing</h2>
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<script>
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  const d = new Date();
+//   document.getElementById("demo").innerHTML = d.toLocaleTimeString(); //local time
+//   document.getElementById("demo").innerHTML = d.toLocaleDateString(); // data
+//   document.getElementById("demo").innerHTML = d.toTimeString(); //time with gobale
+  document.getElementById("demo").innerHTML = d.toUTCString(); //day/date and time
+}
+</script>
+
+</body>
+</html>

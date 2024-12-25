@@ -1,0 +1,151 @@
+Q1: What are props in React.js? How are props different from state?
+
+=> Props are inputs to React components. They are used to pass data from a parent component to a child component and are read-only—a component cannot modify its own props. Props enable components to be reusable and dynamic by allowing external customization.
+
+=> Key Features of Props:
+    Props are immutable (cannot be changed by the component receiving them).
+    They are passed as attributes in JSX and accessed using this.props (class components) or directly in function components.
+    Props are primarily used for data communication between components.
+
+Example => 
+     
+      function Greeting(props) {
+        return <h1>Hello, {props.name}!</h1>;
+    }
+
+     <Greeting name="Alice" />
+
+=> Differences Between Props and State:
+   
+    * Props
+     a) Props are used to pass data to a component.
+     b) Props are read-only and immutable.
+     c) Controlled by the parent component.
+     d) Functional components receive props as arguments.
+     e) Used for static or external data.
+
+    * State
+     a) State is used to manage data within a component.
+     b) State is mutable and can be updated using setState or useState.
+     c) Controlled and managed within the component.
+     d) State is defined and managed internally in a class or functional component.
+     e) Used for dynamic or internal data that changes over time.
+
+ 
+
+Q2: Explain the concept of state in React and how it is used to manage
+    component data.
+
+=> State in React is a built-in object used to hold data or information about the component. Unlike props, state is mutable and can change over the component's lifecycle. State allows React components to react dynamically to user input, events, and other changes.
+
+=> Key Features of State:
+   a) Component-specific: State is owned and managed within the component.
+   b) Dynamic: Changes to the state trigger a re-render of the component to reflect updated data.
+   c) Initialization: State is typically initialized in the constructor (for class components) or via useState in functional components.
+
+* Initialize State:
+
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+}
+
+* Access State:
+
+render() {
+  return <h1>Count: {this.state.count}</h1>;
+}
+
+* Update State:
+
+this.setState({ count: this.state.count + 1 });
+
+* In Functional Components (using useState):
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Count: {count}
+    </button>
+  );
+}
+
+
+
+Q3: Why is this.setState()used in class components, and how does it work?
+
+=> this.setState() is a method provided by React to update the state of a class component. It schedules a re-render of the component and updates the DOM to reflect the new state.
+
+=> Use this.setState()
+
+   a) Immutable Updates: Directly modifying this.state does not trigger a re-render and can lead to unpredictable behavior.
+   b) Batch Updates: React batches multiple setState calls to optimize performance.
+   c) Declarative Approach: Encourages a clear and controlled way to update and manage state changes.
+
+* Object Form:
+
+this.setState({ count: this.state.count + 1 });
+
+* Function Form:
+
+this.setState((prevState) => {
+  return { count: prevState.count + 1 };
+});
+
+* Asynchronous Nature:
+
+this.setState() is asynchronous, meaning multiple calls may not update state immediately. React batches them for performance optimization.
+
+* Re-rendering:
+
+After calling setState, React re-renders the component and its children to reflect the updated state.
+
+
+=> class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  increment = () => {
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Count: {this.state.count}</h1>
+        <button onClick={this.increment}>Increment</button>
+      </div>
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+Q1: What are components in React? Explain the difference between functional components and class components.
+
+Ans:- In React, components are the building blocks of a React application. They encapsulate reusable pieces of user interface and manage their behavior. React components can be thought of as JavaScript functions or classes that accept inputs, called props, and return React elements describing the UI.
+
+  -> Types of React Components
+
+  a. Functional Components
+    - They accept props as arguments and return React elements (JSX).
+
+    - function Greeting(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}
+
+  b. Class Components
+    - These are ES6 classes that extend React.Component.
+    
+    - class Greeting extends React.Component {
+    render() {
+        return <h1>Hello, {this.props.name}!</h1>;
+    }
+}
+
+
+Q2: How do you pass data to a component using props?
+
+  - Simply include the data as an attribute within the JSX when you render the component, giving the attribute a name that will be used to access the data within the component itself; this essentially acts like an argument to the component function, allowing it to receive custom data from its parent component.
+
+  - // Parent component
+
+function App() {
+
+  const userName = "Vikas Patel";
+
+  return (
+
+    <div>
+
+      <Greeting name={userName} /> {/* Passing "userName" as a prop called "name"  */}
+
+    </div>
+
+  );
+
+}
+
+// Child component
+
+function Greeting({ name }) {  
+
+  return <p>Hello, {name}!</p>;
+
+}
+
+
+
+Q3: What is the role of render()in class components?
+
+   - The render() method is the essential function that defines what the component will display on the screen by returning JSX elements, essentially describing the UI structure based on the component's current state and props; it's the only required method in a class component and is called whenever the component needs to re-render itself due to changes in its state or props.
+
+   - Returns JSX: The render() method always returns a JSX element (or an array of elements) which represents the HTML structure that will be displayed on the page.
+
+   - this.props and this.state: Inside the render() function, you can access the component's props (data passed from parent components) and state (internal data that can be updated) using this.props and this.state respectively.
+
+   - Re-rendering mechanism: When the state or props of a component change, React automatically calls the render() method again to re-render the component with the updated values.
+
+   - class MyComponent extends React.Component {
+
+  constructor(props) {
+
+    super(props);
+
+    this.state = { count: 0 };
+
+  }
+
+  handleClick = () => {
+
+    this.setState({ count: this.state.count + 1 });
+
+  }
+
+  render() {
+
+    return (
+
+      <div>
+
+        <p>Count: {this.state.count}</p>
+
+        <button onClick={this.handleClick}>Increment</button>
+
+      </div>
+
+    );
+
+  }
+
+}
+

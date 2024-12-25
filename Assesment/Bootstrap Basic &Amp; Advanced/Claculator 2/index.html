@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Interval Calculator</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        #resultBox {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        #resultBox h5 {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Date Interval Calculator</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="dateCalculatorForm">
+                    <!-- From Date -->
+                    <div class="form-group">
+                        <label for="fromDate">From:</label>
+                        <input type="date" class="form-control" id="fromDate" placeholder="Select a start date">
+                    </div>
+                    
+                    <!-- To Date -->
+                    <div class="form-group">
+                        <label for="toDate">To:</label>
+                        <input type="date" class="form-control" id="toDate" placeholder="Select an end date">
+                    </div>
+                    
+                    <!-- Calculate Button -->
+                    <button type="button" class="btn btn-primary btn-block" id="calculateBtn">Calculate</button>
+                </form>
+
+                <!-- Result Section -->
+                <div id="resultBox" style="display: none;">
+                    <h5>Date interval between the selected dates:</h5>
+                    <ul id="resultList" class="list-unstyled">
+                        <li><strong>In years:</strong> <span id="years"></span></li>
+                        <li><strong>In months:</strong> <span id="months"></span></li>
+                        <li><strong>In weeks:</strong> <span id="weeks"></span></li>
+                        <li><strong>In days:</strong> <span id="days"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Function to calculate interval
+        document.getElementById("calculateBtn").addEventListener("click", function () {
+            const fromDate = document.getElementById("fromDate").value;
+            const toDate = document.getElementById("toDate").value;
+
+            if (!fromDate || !toDate) {
+                alert("Please select both dates.");
+                return;
+            }
+
+            const startDate = new Date(fromDate);
+            const endDate = new Date(toDate);
+
+            if (startDate > endDate) {
+                alert("The start date cannot be later than the end date.");
+                return;
+            }
+
+            // Calculate differences
+            const differenceInTime = endDate - startDate;
+            const differenceInDays = differenceInTime / (1000 * 3600 * 24);
+            const differenceInWeeks = Math.floor(differenceInDays / 7);
+            const differenceInMonths = Math.floor(differenceInDays / 30.44); // Approximation
+            const differenceInYears = Math.floor(differenceInDays / 365.25); // Leap years included
+
+            // Update the result
+            document.getElementById("years").textContent = differenceInYears;
+            document.getElementById("months").textContent = differenceInMonths;
+            document.getElementById("weeks").textContent = differenceInWeeks;
+            document.getElementById("days").textContent = Math.floor(differenceInDays);
+
+            // Show the result box
+            document.getElementById("resultBox").style.display = "block";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+Q 1: What is the Context API in React? How is it used to manage global state
+acrossmultiple components?
+
+=> The Context API in React is a feature that enables sharing state or data across multiple components without passing props through each component manually (prop drilling). It provides a way to manage global state for components that are part of the same tree structure.
+
+=> Key Features of Context API:
+
+a) Global State Management: Useful for managing state like themes, user authentication, or application-wide settings.
+b) Avoids Prop Drilling: Eliminates the need to pass props down through multiple levels of a component tree.
+c) Efficient Updates: Only components that consume the context are re-rendered when the context value changes.
+
+import React, { createContext, useState, useContext } from "react";
+
+ => Create Context
+
+const ThemeContext = createContext();
+
+const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  return (
+    // Provide the context value
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+};
+
+const Toolbar = () => {
+  return <ThemeSwitcher />;
+};
+
+const ThemeSwitcher = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  return (
+    <div>
+      <p>Current theme: {theme}</p>
+      <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        Toggle Theme
+      </button>
+    </div>
+  );
+};
+
+
+Q 2: Explain how createContext()and useContext()are used in React forsharing
+state.
+
+=> createContext()
+
+a) Purpose: Creates a new Context object.
+b) Usage:
+     Initialize a context by calling createContext().
+     This object contains a Provider and Consumer.
+     The Provider allows you to supply a value for the context, while components can use the Consumer or useContext() to access that value.
+
+const UserContext = createContext();
+
+=> useContext()
+
+a) Purpose: A React hook that allows functional components to access the value of a context directly.
+b) Usage:
+    Import and call useContext() with the context object.
+    It simplifies access compared to the Consumer component.
+
+const user = useContext(UserContext);
+
+=> Define Context:
+
+const AuthContext = createContext();
+
+=> Provide Context:
+
+const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+
+  return (
+    <AuthContext.Provider value={{ user, setUser }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+=> Consume Context:
+
+const UserProfile = () => {
+  const { user, setUser } = useContext(AuthContext);
+
+  return (
+    <div>
+      <p>User: {user ? user.name : "Guest"}</p>
+      <button onClick={() => setUser({ name: "John Doe" })}>Login</button>
+    </div>
+  );
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

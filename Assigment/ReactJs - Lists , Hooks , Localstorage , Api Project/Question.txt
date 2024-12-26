@@ -1,0 +1,268 @@
+* Lists and Keys
+
+
+Q 1: How do you render a list of items in React? Why is it important to use
+keys when rendering lists?
+
+=> To render a list of items in React, you typically use the map() function to iterate over an array and return a React component for each item.
+
+Ex. 
+const items = ['Apple', 'Banana', 'Cherry'];
+
+function ItemList() {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+=> Importance of Keys:
+Keys help React identify which items in a list have changed, been added, or removed. They allow React to optimize       rendering by only updating the necessary elements in the DOM, which improves performance. Without keys, React would re-render    
+the entire list instead of selectively updating the changed items.
+
+
+
+Q 2: What are keys in React, and what happens if you do not provide a unique key?
+
+
+=> What Are Keys?
+Keys are unique identifiers for elements in a list. They are passed as a key attribute to React elements when rendering a list. Keys should be unique among siblings but do not need to be globally unique. A common practice is to use a unique property from the data, such as an id.
+
+const items = [
+  { id: 1, name: 'Apple' },
+  { id: 2, name: 'Banana' },
+  { id: 3, name: 'Cherry' },
+];
+
+function ItemList() {
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+If you do not provide a unique key:
+
+a) React may fail to efficiently reconcile the DOM.
+b) Unexpected bugs can occur, such as improper updates or incorrect reordering.
+c) Performance may degrade, as React cannot optimize the rendering process.
+
+Using a non-unique or index-based key as a fallback (key={index}) should be avoided when the list items might change or reorder, as it can lead to incorrect updates.
+
+
+***********************
+
+** Hooks **
+
+
+
+Q 1: What are React hooks? How do useState()and useEffect()hooks work in
+functional components?
+
+=> React Hooks:
+Hooks are functions that allow you to use React state and lifecycle features in functional components. They eliminate the need for class components to manage state or lifecycle logic.
+
+useState():
+
+a) Allows you to add state to a functional component.
+b) Syntax: const [state, setState] = useState(initialValue)
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+useEffect():
+
+a) Allows you to perform side effects (e.g., fetching data, subscribing to events) in functional components.
+b) Replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount.
+c) Syntax: useEffect(callback, dependencies)
+
+import React, { useState, useEffect } from 'react';
+
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval); // Cleanup
+  }, []); // Empty dependency array to run only once
+
+  return <p>Time: {seconds} seconds</p>;
+}
+
+
+
+Q 2: What problems did hooks solve in React development? Why are
+hooksconsidered an important addition to React?
+
+=> Problems Solved by Hooks:
+
+a) Complex Logic in Class Components: Hooks simplify sharing and reusing stateful logic between components without the need for higher-order components (HOCs) or render props.
+b) State Management in Functional Components: Hooks enable functional components to manage state and lifecycle, reducing the need for class components.
+c) Better Organization: Hooks allow developers to separate concerns by organizing related logic into smaller, reusable functions.
+d) Boilerplate Reduction: Hooks reduce boilerplate code compared to class components.
+
+=> Importance of Hooks:
+
+a) Simplifies React development by making state and lifecycle management more intuitive.
+b) Promotes functional programming practices.
+c) Improves readability and maintainability of code.
+
+
+Q 3: What is useReducer ? How we use in react app?
+
+=> useReducer:
+
+a) A hook for managing complex state logic that involves multiple sub-values or actions.
+b) Similar to useState, but provides a more structured way to handle state transitions using a reducer function.
+
+const [state, dispatch] = useReducer(reducer, initialState);
+
+Example:
+
+import React, { useReducer } from 'react';
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+    </div>
+  );
+}
+
+
+
+Q 4: What is the purpose of useCallback & useMemo Hooks?
+
+=> useCallback:
+
+a) Memoizes a function to prevent it from being recreated unnecessarily on re-renders.
+b) Useful when passing callback functions to child components to avoid triggering unnecessary re-renders.
+
+=> useMemo:
+
+a) Memoizes a computed value to prevent recalculations on every render.
+b) Useful for optimizing expensive computations.
+
+
+Q 5: What’s the Difference between the useCallback & useMemo Hooks?
+
+=> useCallback
+
+a) Memoizes a function.	
+b) A memoized callback function.
+c) Passing stable functions as props.
+
+=> useMemo
+
+a) Memoizes a computed value.
+b) A memoized result of computation.
+c) Avoiding re-computation of values.
+
+
+Q 6 : What is useRef ? How to work in react app?
+
+=> useRef:
+
+a) Returns a mutable object (ref) that persists across renders.
+b) Accessing DOM elements directly.
+c) Storing mutable values without causing re-renders.
+d) Keeping a reference to previous state or props.
+
+Ex 1: Accessing DOM Elements
+
+import React, { useRef } from 'react';
+
+function InputFocus() {
+  const inputRef = useRef();
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={focusInput}>Focus Input</button>
+    </div>
+  );
+}
+
+
+Ex 2: Storing Mutable Values.
+
+import React, { useState, useRef } from 'react';
+
+function Timer() {
+  const [count, setCount] = useState(0);
+  const countRef = useRef(0);
+
+  const increment = () => {
+    countRef.current++;
+    console.log('Count (ref):', countRef.current);
+  };
+
+  return (
+    <div>
+      <p>Count (state): {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment State</button>
+      <button onClick={increment}>Increment Ref</button>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

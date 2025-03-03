@@ -1,0 +1,28 @@
+### Node.js vs. PHP/Java (Traditional Server-Side Technologies)
+
+1. **Execution Model**:
+   - **Node.js**: Non-blocking, event-driven (asynchronous).
+   - **PHP/Java**: Blocking, multi-threaded (synchronous by default).
+
+2. **Performance**:
+   - **Node.js**: High performance for I/O-heavy tasks; single-threaded.
+   - **PHP/Java**: Better for CPU-intensive tasks; multi-threaded.
+
+3. **Environment**:
+   - **Node.js**: JavaScript runtime; same language for front-end and back-end.
+   - **PHP**: Dedicated for web development; paired with LAMP stack.
+   - **Java**: General-purpose; enterprise-grade systems.
+
+4. **Scalability**:
+   - **Node.js**: Easily scalable with event loop.
+   - **PHP/Java**: Scales via multi-threading or clustering.
+
+5. **Community and Ecosystem**:
+   - **Node.js**: NPM for packages; fast-growing.
+   - **PHP**: Mature but losing popularity.
+   - **Java**: Enterprise support, vast libraries.
+
+6. **Use Cases**:
+   - **Node.js**: Real-time apps, microservices.
+   - **PHP**: Content-driven websites.
+   - **Java**: Large-scale, enterprise systems.
